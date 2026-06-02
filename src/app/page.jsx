@@ -4,6 +4,7 @@ import About from '@/sections/About'
 import Solutions from '@/sections/Solutions'
 import WhyUs from '@/sections/WhyUs'
 import Contact from '@/sections/Contact'
+import Footer from '@/sections/Footer'
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
       <Solutions />
       <WhyUs />
       <Contact />
+      <Footer />
     </main>
   )
 }
