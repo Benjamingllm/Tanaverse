@@ -1,6 +1,7 @@
 import Header from '@/sections/Header'
 import Hero from '@/sections/Hero'
 import About from '@/sections/About'
+import Solutions from '@/sections/Solutions'
 
 export default function HomePage() {
   return (
@@ -8,6 +9,7 @@ export default function HomePage() {
       <Header />
       <Hero />
       <About />
+      <Solutions />
     </main>
   )
 }
