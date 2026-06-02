@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --ink: #0f0f0f;
+  --paper: #f5f2ed;
+  --accent: #c8a96e;
+  --muted: #6b6760;
+  --rule: #d9d5cf;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f5f2ed;
+  color: #0f0f0f;
+}
