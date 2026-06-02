@@ -8,7 +8,7 @@ import Footer from '@/sections/Footer'
 
 export default function HomePage() {
   return (
-    <main>
+    <main id="main-content">
       <Header />
       <Hero />
       <About />

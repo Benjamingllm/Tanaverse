@@ -1,6 +1,6 @@
 export default function Button({ children, variant = 'primary', href, ...props }) {
   const base =
-    'inline-flex items-center gap-2 text-sm tracking-widest uppercase transition-colors duration-200 cursor-pointer disabled:opacity-50'
+    'inline-flex items-center gap-2 text-sm tracking-widest uppercase transition-colors duration-200 cursor-pointer disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-paper'
 
   const variants = {
     primary: 'bg-ink text-paper px-6 py-3 hover:bg-accent',

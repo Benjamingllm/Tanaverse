@@ -18,12 +18,12 @@ const dmSans = DM_Sans({
 })
 
 export const metadata = {
+  metadataBase: new URL('http://localhost:3000'),
   title: company.meta.title,
   description: company.meta.description,
   openGraph: {
     title: company.meta.title,
     description: company.meta.description,
-    images: [company.meta.ogImage],
   },
 }
 
@@ -31,6 +31,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fr" className={`${playfair.variable} ${dmSans.variable}`}>
       <body className="font-sans antialiased bg-paper text-ink">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-paper focus:text-ink focus:px-4 focus:py-2 focus:text-sm focus:tracking-widest focus:uppercase focus:border focus:border-ink"
+        >
+          Aller au contenu
+        </a>
         {children}
       </body>
     </html>

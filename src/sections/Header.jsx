@@ -35,7 +35,7 @@ export default function Header() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-xs tracking-widest uppercase text-muted hover:text-ink transition-colors duration-200"
+                className="text-xs tracking-widest uppercase text-muted hover:text-ink transition-colors duration-200 focus-visible:outline-none focus-visible:text-ink"
               >
                 {link.label}
               </a>
@@ -45,7 +45,7 @@ export default function Header() {
 
         <a
           href="#contact"
-          className="text-xs tracking-widest uppercase border-b border-ink hover:border-accent hover:text-accent transition-colors duration-200 pb-0.5"
+          className="text-xs tracking-widest uppercase border-b border-ink hover:border-accent hover:text-accent transition-colors duration-200 pb-0.5 focus-visible:outline-none focus-visible:border-accent focus-visible:text-accent"
         >
           Demander l&apos;accès →
         </a>
