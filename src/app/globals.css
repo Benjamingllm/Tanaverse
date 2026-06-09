@@ -14,7 +14,15 @@ html {
   scroll-behavior: smooth;
 }
 
+.dark {
+  --ink: #f0ece5;
+  --paper: #0f0f0f;
+  --accent: #c8a96e;
+  --muted: #9a9590;
+  --rule: #2a2725;
+}
+
 body {
-  background-color: #f5f2ed;
-  color: #0f0f0f;
+  background-color: var(--paper);
+  color: var(--ink);
 }

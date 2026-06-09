@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direction A — Éditorial / Typographique</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f2ed;
+    --accent: #c8a96e;
+    --muted: #6b6760;
+    --rule: #d9d5cf;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+  }
+
+  /* NAV */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1.5rem 4rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+  }
+  .logo span { color: var(--accent); }
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* HERO */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 88vh;
+    border-bottom: 1px solid var(--rule);
+  }
+  .hero-left {
+    padding: 5rem 4rem;
+    border-right: 1px solid var(--rule);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .issue-tag {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3.5rem, 6vw, 5.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    margin-top: 2rem;
+  }
+  h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+  .hero-desc {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--muted);
+    max-width: 38ch;
+    margin-top: 2rem;
+  }
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 3rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 0.25rem;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .hero-right {
+    padding: 5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1.5rem;
+  }
+  .solution-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1.25rem 0;
+    border-top: 1px solid var(--rule);
+    cursor: pointer;
+  }
+  .solution-row:last-child { border-bottom: 1px solid var(--rule); }
+  .solution-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    letter-spacing: -0.02em;
+  }
+  .solution-tag {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .solution-arrow { color: var(--accent); font-size: 1.2rem; }
+
+  /* ANNOTATION */
+  .annotation {
+    background: rgba(200,169,110,0.12);
+    border: 1.5px dashed var(--accent);
+    border-radius: 4px;
+    padding: 0.6rem 1rem;
+    font-size: 0.78rem;
+    color: #7a6030;
+    margin: 0.5rem 0;
+    max-width: 420px;
+  }
+  .annotation strong { display: block; margin-bottom: 0.2rem; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Tana<span>verse</span></div>
+  <ul class="nav-links">
+    <li>À propos</li>
+    <li>Solutions</li>
+    <li>Contact</li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <span class="issue-tag">Plateforme SaaS · 2025</span>
+
+    <div>
+      <h1>Trois outils.<br><em>Un seul</em><br>univers.</h1>
+      <p class="hero-desc">
+        Tanaverse regroupe des solutions pensées pour les agriculteurs,
+        les sportifs et les équipes RH. Simple, précis, efficace.
+      </p>
+      <a class="hero-cta" href="#">Découvrir les solutions →</a>
+    </div>
+
+    <div class="annotation">
+      <strong>Direction A — Éditorial</strong>
+      Fond crème / encre noire · Playfair Display (serif) + DM Sans ·
+      Accent doré · Grille stricte · Zéro dégradé · Lignes comme structure visuelle
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <p style="font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;">Nos solutions</p>
+
+    <div class="solution-row">
+      <span class="solution-name">Tanasoil</span>
+      <span class="solution-tag">Agriculture</span>
+      <span class="solution-arrow">↗</span>
+    </div>
+    <div class="solution-row">
+      <span class="solution-name">Tanafit</span>
+      <span class="solution-tag">Sport & santé</span>
+      <span class="solution-arrow">↗</span>
+    </div>
+    <div class="solution-row">
+      <span class="solution-name">Tanasync</span>
+      <span class="solution-tag">Ressources humaines</span>
+      <span class="solution-arrow">↗</span>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

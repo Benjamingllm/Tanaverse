@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direction D — Audacieux / Fond sombre</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0a0a0a;
+    --surface: #141414;
+    --border: #252525;
+    --text: #e8e6e1;
+    --muted: #6e6b66;
+    --accent: #e8ff47;
+    --accent-dim: rgba(232,255,71,0.08);
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+  }
+
+  /* NAV */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 4rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: -0.02em;
+  }
+  .logo span { color: var(--accent); }
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .nav-cta {
+    background: var(--accent);
+    color: var(--bg);
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 6rem 4rem 4rem;
+    min-height: 86vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .hero-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .tag-row {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .tag {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 0.3rem 0.7rem;
+  }
+  .tag-accent {
+    color: var(--accent);
+    border-color: rgba(232,255,71,0.3);
+  }
+
+  h1 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(4rem, 8vw, 8rem);
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+  }
+  h1 .accent { color: var(--accent); }
+  h1 .outline {
+    -webkit-text-stroke: 1px var(--text);
+    color: transparent;
+  }
+
+  .hero-desc {
+    max-width: 36ch;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--muted);
+    margin-top: 3rem;
+  }
+
+  /* SOLUTIONS GRID */
+  .solutions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    margin-top: 4rem;
+    border: 1px solid var(--border);
+  }
+  .sol-card {
+    background: var(--bg);
+    padding: 2rem;
+    position: relative;
+    transition: background 0.2s;
+  }
+  .sol-card:hover { background: var(--surface); }
+  .sol-number {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.7rem;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+  }
+  .sol-name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: -0.03em;
+  }
+  .sol-name .first { color: var(--accent); }
+  .sol-sector {
+    font-size: 0.8rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 0.5rem;
+  }
+  .sol-arrow {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    color: var(--accent);
+    font-size: 1.2rem;
+  }
+
+  /* ANNOTATION */
+  .annotation {
+    background: rgba(232,255,71,0.07);
+    border: 1.5px dashed rgba(232,255,71,0.4);
+    border-radius: 4px;
+    padding: 0.6rem 1rem;
+    font-size: 0.78rem;
+    color: #b8c840;
+    margin-top: 2rem;
+    max-width: 460px;
+  }
+  .annotation strong { display: block; margin-bottom: 0.2rem; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">TANA<span>VERSE</span></div>
+  <ul class="nav-links">
+    <li>À propos</li>
+    <li>Solutions</li>
+    <li>Contact</li>
+  </ul>
+  <a class="nav-cta" href="#">Demander l'accès</a>
+</nav>
+
+<section class="hero">
+  <div>
+    <div class="tag-row">
+      <span class="tag tag-accent">Beta · 2025</span>
+      <span class="tag">Plateforme SaaS</span>
+      <span class="tag">3 solutions</span>
+    </div>
+
+    <h1>
+      TANA<span class="accent">—</span><br>
+      <span class="outline">VERSE</span>
+    </h1>
+
+    <p class="hero-desc">
+      Des outils taillés pour le terrain. Agriculture, sport, RH —
+      trois univers, une seule plateforme pensée pour aller à l'essentiel.
+    </p>
+  </div>
+
+  <div>
+    <div class="solutions">
+      <div class="sol-card">
+        <div class="sol-number">01 /</div>
+        <div class="sol-name"><span class="first">Tana</span>soil</div>
+        <div class="sol-sector">Agriculture</div>
+        <span class="sol-arrow">↗</span>
+      </div>
+      <div class="sol-card">
+        <div class="sol-number">02 /</div>
+        <div class="sol-name"><span class="first">Tana</span>fit</div>
+        <div class="sol-sector">Sport & santé</div>
+        <span class="sol-arrow">↗</span>
+      </div>
+      <div class="sol-card">
+        <div class="sol-number">03 /</div>
+        <div class="sol-name"><span class="first">Tana</span>sync</div>
+        <div class="sol-sector">Ressources humaines</div>
+        <span class="sol-arrow">↗</span>
+      </div>
+    </div>
+
+    <div class="annotation">
+      <strong>Direction D — Audacieux</strong>
+      Fond noir · Syne (display géométrique) + DM Sans · Accent jaune électrique ·
+      Typo uppercase massive · Contrastes extrêmes · Zéro couleur parasite
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

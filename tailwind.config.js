@@ -4,11 +4,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ink: '#0f0f0f',
-        paper: '#f5f2ed',
-        accent: '#c8a96e',
-        muted: '#6b6760',
-        rule: '#d9d5cf',
+        ink: 'var(--ink)',
+        paper: 'var(--paper)',
+        accent: 'var(--accent)',
+        muted: 'var(--muted)',
+        rule: 'var(--rule)',
       },
       fontFamily: {
         display: ['var(--font-playfair)', 'Georgia', 'serif'],
