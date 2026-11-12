@@ -34,3 +34,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# outils IA (gardés en local, hors du dépôt)
+.agents/
+.superpowers/
+docs/superpowers/
+skills-lock.json
